@@ -3,6 +3,12 @@
   "dockerComposeFile": "../docker-compose.yml",
   "service": "bp-pytorch-dev",
   "workspaceFolder": "/workspace",
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/workspace,type=bind"
+  ],
+  "containerEnv": {
+    "PYTHONPATH": "/workspace/src"
+  },
   "remoteUser": "root",
   "customizations": {
     "vscode": {
@@ -13,6 +19,9 @@
         "charliermarsh.ruff",
         "ms-toolsai.jupyter"
       ]
+    },
+    "settings": {
+      "git.path": "/usr/bin/git"
     }
   }
 }
