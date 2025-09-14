@@ -1,0 +1,20 @@
+services:
+  bp-pytorch-dev:
+    build: .
+    container_name: bp-pytorch-dev
+    tty: true
+    stdin_open: true
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    volumes:
+      - ./workspace:/workspace
+    working_dir: /workspace
+    network_mode: host
+    ipc: host
