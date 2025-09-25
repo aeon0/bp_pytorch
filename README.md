@@ -3,14 +3,14 @@
 Easy project to get start with Docker, PyTorch, PyTorch Lightning, Hydra, Pydantic and VS Code development.
 
 ## Dependencies
-- Docker: https://docs.docker.com/engine/install/ubuntu/
+- Linux: Tested with Ubuntu 24.04
+- Docker: https://docs.docker.com/engine/install/ubuntu/ & https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user
+- Nvidia container toolkit: https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html
 - VS Code: https://code.visualstudio.com/ (Extensions: Python, Dev Containers)
 - Workstation with Nvidia GPU
 
 ## Get into the Container
 In VS Code press ctrl+shift+P and search for "Dev Containers: Rebuild and Reopen in Container". The first time this will take a bit as Docker as to pull the Image. Once its ready you will be in the container and you will see only the workspace folder. Switch back with ctrl+shift+P and "Dev Containers: Reopen folder localy".
-
-Note: I am poor and dont have an up-to-date Nvidia GPU, thus I am not using the latest PyTorch image. Switch out the image and adapt versions as you need. https://hub.docker.com/r/pytorch/pytorch/tags.
 
 ## Run and Debug Code
 Run `python train.py` or `python predict.py` (need to have run training before) or run via f5.
