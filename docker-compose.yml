@@ -18,4 +18,3 @@ services:
     working_dir: /workspace
     network_mode: host
     ipc: host
-    user: "${UID}:${GID}"
