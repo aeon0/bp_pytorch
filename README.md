@@ -21,3 +21,7 @@ Run `python train.py` or `python predict.py` (need to have run training before) 
 Error response from daemon: Conflict. The container name "/bp-pytorch-dev" is already in use by container "fbb94ded6b754f6629d3fb197e05f32d9cafd73f97ade0032e2edaa440da25db". You have to remove (or rename) that container to be able to reuse that name.
 ```
 In case something crashed it can happen that the dev container has not shut down. In this case you have to manually stop it: `docker stop bp-pytorch-dev && docker rm bp-pytorch-dev`
+
+#### File permissions
+If files are generated inside the container they are owned by root. To not have any pain with them editing outside you can do this outside of the container:
+`sudo chown -R $(whoami) .`
