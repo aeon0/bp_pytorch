@@ -1,6 +1,6 @@
 {
   "name": "bp pytorch dev",
-  "dockerComposeFile": "../docker-compose.yml",
+  "dockerComposeFile": "docker-compose.yml",
   "service": "bp-pytorch-dev",
   "workspaceFolder": "/workspace",
   "mounts": [

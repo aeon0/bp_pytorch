@@ -10,7 +10,7 @@ services:
           devices:
             - driver: nvidia
               count: all
-              capabilities: [gpu]
+              capabilities: [ gpu ]
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
     volumes:
@@ -18,3 +18,4 @@ services:
     working_dir: /workspace
     network_mode: host
     ipc: host
+    user: "${UID}:${GID}"
